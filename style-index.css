@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 
-.top-page {
+.top {
     height: 80px;
     margin: 0 auto;
     padding: 0px 0px;
@@ -28,7 +28,7 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.top-page .container {
+.top__container {
     display:flex;
     width: 1200px;
     padding-left: 15px;
@@ -44,71 +44,7 @@ nav {
     align-items: center;
 }
 
-.top-page .container .navigation {
-    display: flex;
-    padding: 0px 0px;
-    margin: 0px 0px 0px 93px;
-    width: 281px;
-    position: relative;
-    justify-content: space-between;
-}
-
-.top-page .container .contact {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    width: 340px;
-    height: 16px;
-    margin: 0px 0px 0px 344px;
-    padding: 0px 0px;
-}
-
-.top-page .container .contact li {
-    flex-basis: calc((100% - 30px) / 2);
-}
-
-.contact .email {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: var(--lineweight-normal);
-    color: var(--color-gris);
-    fill: var(--color-gris);
-}
-
-.contact .celphone {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: var(--lineweight-normal);
-    color: var(--color-gris);
-    fill: var(--color-gris);
-}
-
-.contact .email .icon {
-    width: 20px;
-    height: 16px;   
-    stroke-width: 0;
-    align-items: center;
-}       
-
-.contact .celphone .icon {
-    width: 16px;
-    height: 16px;
-    stroke-width: 0;
-    align-items: center;
-}
-
-.contact a:hover,
-.contact a:focus {
-    color: var(--color-azul);
-    fill: var(--color-azul);
-}
-
-.webstudio,
-.foot-info .webstudio {
+.webstudio {
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     font-style: bold;
@@ -116,19 +52,20 @@ nav {
     color: var(--color-azul);
 }
 
-.estudio,
-.contactos,
-.portafolio {
-    font-weight: 500;
-    font-style: medium;
-    line-height: var(--lineweight-normal);
+.top__navigation {
+    display: flex;
+    padding: 0px 0px;
+    margin: 0px 0px 0px 93px;
+    width: 280px;
+    position: relative;
+    gap: 50px;
 }
 
-.estudio {
-    color: var(--color-azul);
+.top__navigation li {
+    flex-basis: calc((100% - 100) / 3);
 }
 
-.navigation li .estudio::after {
+.navigation--estudio::after {
     background-color: var(--color-azul);
     width: 53.75px;
     height: 4px;
@@ -139,18 +76,70 @@ nav {
     top: 46px;
 }
 
-.contactos:hover,
-.portafolio:hover,
-.contactos:focus,
-.portafolio:focus {
+.top__navigation a {
+    font-weight: 500;
+    font-style: medium;
+    line-height: var(--lineweight-normal);
+}
+
+.navigation--estudio {
+    color: var(--color-azul);
+}
+
+.top__navigation a:hover,
+.top__navigation a:focus {
     color: var(--color-azul);
     font-weight: 500;
     line-height: var(--lineweight-normal);
 }
 
+.top__contact {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 340px;
+    height: 16px;
+    margin: 0px 0px 0px 344px;
+    padding: 0px 0px;
+}
+
+.top__contact li {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+.top__contact a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: var(--lineweight-normal);
+    color: var(--color-gris);
+    fill: var(--color-gris);
+}
+
+.contact__email--icon {
+    width: 20px;
+    height: 16px;   
+    stroke-width: 0;
+    align-items: center;
+}       
+
+.contact__celphone--icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 0;
+    align-items: center;
+}
+
+.top__contact a:hover,
+.top__contact a:focus {
+    color: var(--color-azul);
+    fill: var(--color-azul);
+}
+
 /* TITLE WEBSITE */
 
-.main-title {
+.main__title {
     background-color: var(--color-behindpage);
     background-image: url(Imagenes/images-index/backgroung-title.jpg);
     background-repeat: no-repeat;
@@ -159,7 +148,7 @@ nav {
     margin: 0 auto;
 }
 
-.main-title .container {
+.main__title--container {
     display: flex;
     flex-direction: column;
     height: 506px;
@@ -167,7 +156,7 @@ nav {
     justify-content: center;
 }
 
-.main-title h1 {
+.main__title h1 {
     color: var(--color-hueso);
     font-weight: 900;
     font-size: 44px;
@@ -176,7 +165,7 @@ nav {
 
 /* MODAL STYLE */
 
-.main-title .open__modal {
+.open__modal {
     background-color: var(--color-azul);
     color: var(--color-hueso);
     font-weight: 700;
@@ -190,7 +179,7 @@ nav {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.backdrop {
+.modal__backdrop {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,12 +194,12 @@ nav {
     transition: opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.modal__backdrop.is-hidden {
    opacity: 0;
    pointer-events: none;
 }
 
-.modal-form {
+.modal__form {
     background-color: var(--color-hueso);
     width: 528px;
     height: 581px;
@@ -223,7 +212,7 @@ nav {
     padding: 40px;
 }
 
-.modal-form h3 {
+.modal__form h3 {
     text-align: center;
     font-weight: 700;
     font-size: 20px;
