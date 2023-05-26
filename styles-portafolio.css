@@ -19,7 +19,7 @@
 
 /* TOP WEBSITE */
 
-.top-page {
+.top {
     height: 80px;
     margin: 0 auto;
     padding: 0px 0px;
@@ -28,8 +28,8 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.top-page .container {
-    display: flex;
+.top__container {
+    display:flex;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -44,16 +44,56 @@ nav {
     align-items: center;
 }
 
-.top-page .container .navigation {
+.webstudio {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: bold;
+    line-height: var(--lineweight-normal);
+    color: var(--color-azul);
+}
+
+.top__navigation {
     display: flex;
     padding: 0px 0px;
     margin: 0px 0px 0px 93px;
-    width: 281px;
-    justify-content: space-between;
+    width: 280px;
     position: relative;
+    gap: 50px;
 }
 
-.top-page .container .contact {
+.top__navigation li {
+    flex-basis: calc((100% - 100) / 3);
+}
+
+.navigation--portafolio::after {
+    background-color: var(--color-azul);
+    width: 70px;
+    height: 4px;
+    content: "";
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    top: 46px;
+}
+
+.top__navigation a {
+    font-weight: 500;
+    font-style: medium;
+    line-height: var(--lineweight-normal);
+}
+
+.navigation--portafolio {
+    color: var(--color-azul);
+}
+
+.top__navigation a:hover,
+.top__navigation a:focus {
+    color: var(--color-azul);
+    font-weight: 500;
+    line-height: var(--lineweight-normal);
+}
+
+.top__contact {
     display: flex;
     gap: 30px;
     align-items: center;
@@ -63,11 +103,11 @@ nav {
     padding: 0px 0px;
 }
 
-.top-page .container .contact li {
+.top__contact li {
     flex-basis: calc((100% - 30px) / 2);
 }
 
-.contact .email {
+.top__contact a {
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -77,85 +117,35 @@ nav {
     fill: var(--color-gris);
 }
 
-.contact .celphone {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: var(--lineweight-normal);
-    color: var(--color-gris);
-    fill: var(--color-gris);
-}
-
-.contact .email .icon {
+.contact__email--icon {
     width: 20px;
-    height: 16px;
+    height: 16px;   
     stroke-width: 0;
     align-items: center;
-}
+}       
 
-.contact .celphone .icon {
+.contact__celphone--icon {
     width: 16px;
     height: 16px;
     stroke-width: 0;
     align-items: center;
 }
 
-.contact a:hover {
+.top__contact a:hover,
+.top__contact a:focus {
     color: var(--color-azul);
     fill: var(--color-azul);
 }
 
-.webstudio,
-.foot-info .webstudio {
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    font-style: bold;
-    line-height: var(--lineweight-normal);
-    color: var(--color-azul);
-}
-
-.estudio,
-.contactos,
-.portafolio {
-    font-weight: 500;
-    font-style: medium;
-    line-height: var(--lineweight-normal);
-}
-
-.portafolio {
-    color: var(--color-azul);
-}
-
-.navigation li .portafolio::after {
-    background-color: var(--color-azul);
-    width: 71.3px;
-    height: 4px;
-    content: "";
-    display: block;
-    border-radius: 2px;
-    position: absolute;
-    top: 46px;
-}
-
-.estudio:hover,
-.contactos:hover,
-.estudio:focus,
-.contactos:focus {
-    color: var(--color-azul);
-    font-weight: 500;
-    line-height: var(--lineweight-normal);
-}
-
 /* MAIN CONTENT */
 
-.main-content {
+.main__content {
     display: flex;
     margin: 0 auto;
     padding: 47px 0px;
 }
 
-.main-content .container {
+.main__content--container {
     display: flex;
     margin: 0 auto;
     width: 1200px;
@@ -165,7 +155,25 @@ nav {
     flex-direction: column;
 }
 
-.main-content button {
+.main__content--buttons {
+    display: flex;
+    width: 611px;
+    height: 54px;
+    padding: 0px 0px;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.main__content--buttons li {
+    flex-basis: calc((100% - 32px) / 5);
+}
+
+.maincontent__button-selector {
+    font-weight: 500;
+    color: var(--color-texto);
+    line-height: 1.6;
+    font-style: bold;
+    white-space: nowrap;
     background-color: var(--color-botones);
     width: auto;
     height: auto;
@@ -175,7 +183,21 @@ nav {
     padding: 6px 24px;
 }
 
-.main-content .container .images {
+.maincontent__button-selector:hover,
+.maincontent__button-selector:focus {
+    background-color: var(--color-azul);
+    color: var(--color-hueso);
+    font-style: medium;
+    line-height: 1.6;
+    padding: 6px 24px;
+    width: auto;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.main__content--images {
     display: flex;
     flex-wrap: wrap;
     padding: 0px 0px;
@@ -183,43 +205,7 @@ nav {
     align-items: flex-start;
 }
 
-.main-content .container .buttons {
-    display: flex;
-    width: 611px;
-    height: 54px;
-    padding: 0px 0px;
-    gap: 8px;
-    margin-bottom: 18px;
-}
-
-.button-selector {
-    font-weight: 500;
-    color: var(--color-texto);
-    line-height: 1.6;
-    font-style: bold;
-    width: auto;
-    white-space: nowrap;
-}
-
-.main-content .images a h2 {
-    font-weight: 700;
-    font-size: 18px;
-    font-style: bold;
-    line-height: 1;
-    margin: 0px 0px;
-    padding: 20px 24px 0px 24px;
-}
-
-.main-content .images a p {
-    font-size: 16px;
-    line-height: 1.9;
-    font-style: medium;
-    color: var(--color-gris);
-    padding: 20px 24px 10px 24px;
-    margin: 0px;
-}
-
-.main-content .images li {
+.maincontent__images--card {
     background-color: var(--color-hueso);
     display: flex;
     flex-direction: column;
@@ -229,12 +215,17 @@ nav {
     flex-basis: calc((100% - 60px) / 3);
 }
 
-.main-content .images li a .hover-description {
+.maincontent__images--card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+.maincontent__images--container {
     position: relative;
     overflow: hidden;
 }
 
-.main-content .images li a div .description-hover-card {
+.maincontent__images--card .maincontent__images--description {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -250,31 +241,26 @@ nav {
     transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
-.main-content .images li:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-}
-
-.main-content .images li:hover a div .description-hover-card {
+.maincontent__images--card:hover .maincontent__images--description {
     transform: translateY(0);
 }
 
-.main-content button:hover,
-.main-content button:focus {
-    background-color: var(--color-azul);
-    color: var(--color-hueso);
-    font-style: medium;
-    line-height: 1.6;
-    padding: 6px 24px;
-    width: auto;
-    height: auto;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.maincontent__images--card-name {
+    font-weight: 700;
+    font-size: 18px;
+    font-style: bold;
+    line-height: 1;
+    margin: 0px 0px;
+    padding: 20px 24px 0px 24px;
 }
 
-.main-content .container .buttons li {
-    flex-basis: calc((100% - 32px) / 5);
+.maincontent__images--card-selector {
+    font-size: 16px;
+    line-height: 1.9;
+    font-style: medium;
+    color: var(--color-gris);
+    padding: 20px 24px 10px 24px;
+    margin: 0px;
 }
 
 .contact a:hover,
