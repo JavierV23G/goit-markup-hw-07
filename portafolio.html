@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css">
+
     <link rel="stylesheet" href="styles-portafolio.css" />
     <link
       rel="stylesheet"
@@ -16,6 +18,7 @@
   </head>
 
   <body>
+
     <header>
       <section class="top">
         <div class="top__container">
@@ -283,50 +286,68 @@
     </main>
 
     <footer>
-      <section class="foot-page">
-        <div class="container">
-          <ul class="foot-info">
-            <a class="webstudio" href="#" target="_self">WebStudio</a>
-            <li class="address">
-              <address>
+      <section class="footpage">
+        <div class="footpage__container">
+          <ul class="footpage__generalinfo"> 
+            <a class="webstudio footer-webstudio" href="#" target="_self">WebStudio</a> 
+            <li> 
+              <address class="footpage__address"> 
                 Calz. Ticomán 500, Ciudad de México, CDMX, México
               </address>
             </li>
-            <li class="foot-email">
-              <a href="mailto:info@example.com">info@example.com</a>
+            <li>
+              <a href="mailto:info@example.com" class="footpage__contact">info@example.com</a>
             </li>
-            <li class="phone">
-              <a href="tel:+525555296000">+52 55 5529 6000</a>
+            <li>
+              <a href="tel:+525555296000" class="footpage__contact">+52 55 5529 6000</a>
             </li>
           </ul>
-          <div class="find-us">
-            <ul class="text-findus">
+          <div class="footpage__find-us">
+            <ul class="footpage__find-us-text">
               <li>
-                <p>ENCUENTRANOS EN</p>
+                <p class="find-us__text-element">ENCUENTRANOS EN</p>
               </li>
             </ul>
-            <ul class="social-container">
-              <li class="behind-icon-footer">
-                <svg class="foot-icon">
+            <ul class="footpage__social-container">
+              <li>
+                <svg class="footpage__social-media">
                   <use href="Imagenes/SVG/sprite.svg#instagram"></use>
                 </svg>
               </li>
-              <li class="behind-icon-footer">
-                <svg class="foot-icon">
+              <li>
+                <svg class="footpage__social-media">
                   <use href="Imagenes/SVG/sprite.svg#twitter"></use>
                 </svg>
               </li>
-              <li class="behind-icon-footer">
-                <svg class="foot-icon">
+              <li>
+                <svg class="footpage__social-media">
                   <use href="Imagenes/SVG/sprite.svg#facebook"></use>
                 </svg>
               </li>
-              <li class="behind-icon-footer">
-                <svg class="foot-icon">
+              <li>
+                <svg class="footpage__social-media">
                   <use href="Imagenes/SVG/sprite.svg#linkedin"></use>
                 </svg>
               </li>
             </ul>
+          </div>
+          <div class="footpage__subscription">
+            <form name="form-sub" autocomplete="off" action="">
+              <label class="subscription__text" for="email-sub"
+                >SUSCRÍBASE AL BOLETIN INFORMATIVO</label
+              >
+              <input
+                class="subscription__email-box"
+                type="email"
+                name="email-sub"
+                placeholder="Correo electronico"
+                required
+              />
+              <input class="button subscription-submit" type="submit" value="Suscríbanse" />
+              <svg class="subscription__submit-logo">
+                <use href="./Imagenes/SVG/sprite.svg#enviar-sub"></use>
+              </svg>
+            </form>
           </div>
         </div>
       </section>
